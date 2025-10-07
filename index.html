@@ -85,33 +85,38 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 30%;
     }
 
     .sign img {
-      height: 80px;
+      height: 70px;
       width: auto;
       object-fit: contain;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: crisp-edges;
+      margin-bottom: 8px;
     }
 
     .sign p {
-      margin-top: 5px;
-      font-size: 18px;
-      line-height: 1.3;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .sign small {
+      font-size: 14px;
     }
 
     .tagline {
       text-align: center;
       font-size: 12px;
       color: gray;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
-    .sign#middle {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+    /* Center signature adjustment */
+    .footer .sign:nth-child(2) {
+      margin-top: -10px; /* Slight upward shift for perfect balance */
     }
 
     /* Download Button */
@@ -150,8 +155,7 @@
   <!-- Download Button -->
   <button class="download-btn" id="downloadBtn" title="Download Certificate">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path
-        d="M12 16l4-5h-3V4h-2v7H8l4 5zm8 2H4v2h16v-2z" />
+      <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm8 2H4v2h16v-2z" />
     </svg>
     Download PNG
   </button>
@@ -159,11 +163,10 @@
   <div id="certificate" class="certificate">
     <div class="header">
       <div class="logo-box">
-        <!-- <img src="https://drive.google.com/thumbnail?id=1ZT0VN2mhvch16RwKiXPrdOnSs3ZV4KdV" alt="INSTA iQ Logo" id="clg"> -->
-         <img src="./images/INSTA_IQ_LOGO.jpg" alt="INSTA iQ Logo" id="clg"> 
+        <img src="./images/INSTA_IQ_LOGO.jpg" alt="INSTA iQ Logo" id="clg">
       </div>
       <div class="logo-box">
-        <img src="https://drive.google.com/thumbnail?id=16OEbb5bw5sGOT8l3NqKBqjfEXKM4Wcfm" alt="clg logo" id="clg">
+        <img src="./images/COLLEGE_LOGO.png" alt="College Logo" id="clg">
       </div>
     </div>
 
@@ -174,25 +177,25 @@
     <div class="name">[Student Name]</div>
     <div class="content">
       Has successfully participated in <b>Online Competition TECHNOVA’25</b> conducted on 5th Oct 2025,<br>
-      <b>Organized by Department of Vocation (B.VOC)
-        <br> St.Vincent Pallotti College of Engineering & Technology, Nagpur </b><br>
+      <b>Organized by Department of Vocation (B.VOC)<br>
+        St.Vincent Pallotti College of Engineering & Technology, Nagpur</b><br>
       in association with <b>INSTA iQ</b><br>
     </div>
 
     <div class="footer">
-      <div class="sign left">
-        <img src="https://drive.google.com/thumbnail?id=1_0kv0tB1XL_r9G7dzdGjAVHEXeQTtG5E" alt="Hod sign">
-        <p>Dr. Suresh Rangankar<br><small>HOD B.VOC, SVPCET</small></p>
+      <div class="sign">
+        <img src="./images/SIGN HOD DR SR (1).png" alt="HOD sign">
+        <p>Dr. SURESH RANGANKAR<br><small>HOD B.VOC, SVPCET</small></p>
       </div>
 
-      <div class="sign left" id="middle">
-        <img src="https://drive.google.com/thumbnail?id=1Fv8VCtOBg8o4ydRvwpEDXsNDG26jY2CX" alt="Amit Aswale Sign">
-        <p>Mr. Amit Aswale<br><small>DIRECTOR, INSTA IQ</small></p>
+      <div class="sign">
+        <img src="./images/INSTA iQ_SIGNATURE.jpg" alt="Amit Aswale Sign">
+        <p>Mr. AMIT ASWALE<br><small>DIRECTOR, INSTA IQ</small></p>
       </div>
 
-      <div class="sign right">
-        <img src="https://drive.google.com/thumbnail?id=1mkJIgKEkoCGmTRZLzJMTi-YRqGQuOevv" alt="PRINCIPAL SIGN">
-        <p>Mr. Amit Aswale<br><small>PRINCIPAL</small></p>
+      <div class="sign">
+        <img src="./images/SIGN_VW_PRINCIPAL-removebg-preview.png" alt="Principal Sign">
+        <p>Dr. VIJAY WADHAI<br><small>PRINCIPAL, SVPCET NAGPUR</small></p>
       </div>
     </div>
 
@@ -206,8 +209,8 @@
       const certificate = document.getElementById("certificate");
 
       html2canvas(certificate, {
-        scale: 2,           // Higher quality
-        useCORS: true,      // Allow cross-origin images
+        scale: 2,
+        useCORS: true,
         allowTaint: true,
         backgroundColor: "#ffffff"
       }).then(canvas => {
